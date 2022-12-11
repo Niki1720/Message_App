@@ -1,24 +1,42 @@
-# README
+# Message Me - chat app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Message Me is an application that allows the user to chat with other people.
+The chat function uses `Action Cable`, which seamlessly integrates `WebSockets` with the rest of my Rails application.
 
-Things you may want to cover:
+Rails version `6.1`.
+Ruby version `2.5`
 
-* Ruby version
 
-* System dependencies
+# Getting started
 
-* Configuration
+To get the Rails server running locally:
 
-* Database creation
+* Clone this repo
+* `bundle install` to install all req'd dependencies
+* `rake db:migrate` to make all database migrations
+* `rails s` to start the local server
 
-* Database initialization
+### Important controllers:
+* `chatroom_controller`
+* `messages_controller`
+* `sessions_controller`
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+##### Resource
 
-* Deployment instructions
+Table creation and model with validation:
+* Users
+* Messages
 
-* ...
+#### Associations
+* One-to-many between users and messages
+
+
+
+#### Authentication
+
+* Login using secure password
+
+#### Restriction of actions
+
+* Based on logged in/logged out state
